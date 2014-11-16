@@ -1,0 +1,15 @@
+{>"base.dust"/}
+{<css_extra}<link href="/css/about.css" rel="stylesheet">{/css_extra}
+{<about_nav}class="active"{/about_nav}
+{<container}
+<h1>About</h1>
+<h3>What we do</h3>
+CharityVid is a nonprofit that enables people to donate to charity for free. We partner with companies who are interested in donating to charity and give them a way to give back to the community by advertising on our site in return for their donations. 100% of your donation goes to the charity of your choice. Donating is easy and free, just sign in to get started.
+<h3>Info</h3>
+<address>
+  <strong>CharityVid</strong><br>
+  7309 Lazy Creek Drive<br>
+  Austin, TX 78724<br>
+  <abbr title="Phone">P:</abbr> (512) 414-5272
+</address>
+{/container}

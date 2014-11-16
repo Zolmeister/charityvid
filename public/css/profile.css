@@ -1,0 +1,94 @@
+.profile-picture {
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.inspirational-quote {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 40px;
+    margin-top: 30px;
+}
+.inspirational-quote .edit {
+    font-size: 20px;
+    margin-left: 10px;
+}
+.quotation-mark {
+    font-size: 35px;
+    font-weight: bolder;
+}
+.stats {
+    width: 100%;
+    padding: 10px;
+    float: left;
+    margin-top: 10px;
+}
+.stats .stat {
+    width: 70%;
+    padding: 40px;
+    font-size: 60px;
+    font-weight: bolder;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    background-image: url(/img/B8D9EC.png);
+    border-radius: 5px;
+    -moz-box-shadow: 3px 3px 9px #ACACAC;
+    -webkit-box-shadow: 3px 3px 9px #ACACAC;
+    box-shadow: 3px 3px 9px #ACACAC;
+}
+.stats .stat-label {
+    font-size: 40px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+.left-chunk {
+    float:left;
+    padding: 20px;
+    padding-top: 10px;
+    max-width: 400px;
+}
+.charity-element .image {
+    float: none;
+    padding: 0px 10px 0px 10px;
+    height: 70%;
+}
+.charity-element {
+    height: 158px;
+    width: 600px;
+}
+.charity-block {
+    float: right;
+    padding-right: 20px;
+}
+.charity-element .share {
+    margin-top: 10px;
+}
+@media (max-width: 767px) {
+    .stats {
+        padding: 0px;
+    }
+   .stats .stat-label {
+        font-size: 30px;
+    }
+    .profile-picture {
+    }
+}
+
+@media (max-width: 660px) {
+      .charity-element {
+            width: auto;
+        }   
+}
+
+@media (max-width: 550px) {
+    .left-chunk {
+        padding: 0px;
+        padding-top: 10px;
+    }
+    .stats .stat-label {
+        font-size: 23px;
+    }
+}
+

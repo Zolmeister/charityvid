@@ -1,0 +1,54 @@
+{>"base.dust"/}
+{<title}Donate{/title}
+{<meta_extra}
+<meta property="og:title" content="Donate: {charity.name}"/>
+<meta property="og:image" content="http://{domain}/img/charity-logos/{charity.imageName}.png"/>
+<meta property="og:site_name" content="CharityVid"/>
+{/meta_extra}
+{<css_extra}<link href="/css/donate.css" rel="stylesheet">{/css_extra}
+{<js}<script src='/js/donate.js' async></script>{/js}
+{<container}
+<input type='hidden' name='_csrf' id='csrfToken' value='{token}'>
+<div class='donation-info'>
+	<div class='charity-element'>
+		<div class='left-chunk'>
+			<div class='donate-text'>
+                <!-- TODO: fix issue for long charity names -->
+                <!-- TODO: add 'the' to american redcross and breast cancer reasearch -->
+				You are currently donating to<br>
+				<span class='bold'>{charity.name}</span>
+			</div>
+			<div class='status-text'>
+				Donation Status: <span id='donation-status' class='incomplete'>Incomplete</span> 
+                <a href='#' id='donation-continue' class='btn btn-primary btn-medium disabled'>Go Back</a>
+			</div>
+		</div>
+		<div class='charity-block'>
+			<div class='image'>
+				<img alt='{charity.name}' src='/img/charity-logos/{charity.imageName}.png'>
+			</div>
+			<div class='share'>
+				<div class="fb-like" data-href="http://charityvid.org/charity/{charity.nameId}" data-send="true" data-layout="button_count" data-width="200" data-show-faces="false"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class='charity-element thanks'>
+    Thank you, your donation succeeded. Help spread the word by sharing your experience: 
+    <a class='btn btn-primary btn-medium fb-share-btn'>Share</a>
+</div>
+<div class='watch-main'>
+	{?DEBUG}
+	<iframe class="watch-ad" style="background-color: black;color:white" width="640" height="440"></iframe><img src="{adDomain}/pixel?cvparam={trackToken}">
+	{:else}
+	<iframe class="watch-ad" src="{donateAdUrl}&width=640&height=440" width="640" height="440" allowfullscreen marginwidth="0" marginheight="0" frameborder="0" scrolling="no"></iframe>
+	{/DEBUG}
+</div>
+<script>
+var CVPARAM = "{trackToken}";
+var AdDomain = "{adDomain}";
+var DonateAdUrl = "{donateAdUrl}";
+var CharityName = "{charity.name}";
+var CharityLogo = "/img/charity-logos/{charity.imageName}.png";
+</script>
+{/container}

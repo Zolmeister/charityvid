@@ -1,0 +1,29 @@
+{
+  "name": "charityvid",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "nodefly": "stable",
+    "express": "3.0.0rc5",
+    "consolidate": "*",
+    "dustfs": "*",
+    "connect-mongo": "*",
+    "passport": "*",
+    "passport-facebook": "*",
+    "mongodb": "*",
+    "nodemailer": "*",
+    "pixel-tracker": "*",
+    "hiredis": "*",
+    "redis": "*",
+    "node-uuid": "*",
+    "q": "*",
+    "dustjs-linkedin": "*",
+    "dustjs-helpers": "*", 
+    "connect": "*",
+    "winston": "*",
+    "winston-loggly": "*"
+  }
+}

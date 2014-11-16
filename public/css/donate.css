@@ -1,0 +1,130 @@
+.donation-info .left-chunk {
+    display: inline-block;
+    padding: 20px;
+    margin-top:10px;
+    max-width:400px;
+}
+
+#donation-continue {
+
+}
+
+.donation-info .status-text {
+    float:left;
+    clear: left;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.donation-info .incomplete {
+    color: #E11;
+    font-weight: bold;
+}
+
+.donation-info .complete {
+    color: #0B0;
+    font-weight: bold;
+}
+
+.donation-info .donate-text {
+    float: left;
+    line-height: 25px;
+    font-size: 16px;
+}
+
+.donation-info .donate-text .bold {
+    font-weight: bolder;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.charity-element .share {
+    margin-top: 10px;
+}
+
+.watch-main {
+    margin: 0px auto 10px auto;
+}
+
+.watch-ad {
+    margin: 0px auto;
+    display: block;
+    border: none;
+}
+
+.donation-info .image{
+    float: none;
+    padding: 0px 10px 0px 10px;
+    height: 70%;
+}
+
+.donation-info .charity-block{
+    float: right;
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.charity-element{
+    height: 160px;
+}
+
+.donation-info{
+    margin-top:10px;
+}
+
+.thanks {
+    min-height: 2px;
+    height: auto;
+    font-size: 16px;
+    display: none;
+    text-align: center;
+}
+/*
+.overlay{
+    position: absolute;
+    margin-top:-860px;
+    max-width: 400px;
+    background-image: url(/img/B8D9EC.png);
+    height: 60px;
+    margin-left:-20px;
+    border-radius: 5px;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-shadow: 2px 2px 6px #ACACAC;
+    -webkit-box-shadow: 2px 2px 6px #ACACAC;
+    box-shadow: 2px 2px 6px #ACACAC;
+}
+
+.over-text{
+    position: absolute;
+    float:right;
+    padding:20px;
+    margin-left:40px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.close-button{
+    float: right;
+}
+
+.shrink-death{
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
+    -webkit-transition-timing-function: ease-in;
+    -moz-transition-timing-function: ease-in;
+    width:0px;
+}
+*/
+@media (max-width: 680px) {
+    .donation-info .left-chunk {
+        float:none;
+        margin: 0px auto;
+    }
+    .donation-info .charity-block{
+        display:none;
+    }
+}

@@ -1,0 +1,4 @@
+{>"base.dust"/}
+{<container}
+<h1 style="font-size: 300px;display:block; line-height:1;">404</h1>
+{/container}

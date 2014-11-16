@@ -1,0 +1,53 @@
+{>"base.dust"/}
+{<css_extra}<link href="/css/profile.css" rel="stylesheet">{/css_extra}
+{<title}CharityVid - {name}{/title}
+{<meta_extra}
+<meta property="og:title" content="{name} - CharityVid"/>
+<meta property="og:image" content="http://{domain}/ico/apple-touch-icon-144-precomposed.png"/>
+<meta property="og:site_name" content="CharityVid"/>
+{/meta_extra}
+{<js}<script src='/js/profile.js' async></script>{/js}
+{<profile_nav}class="active"{/profile_nav}
+{<container}
+<h1>{name}</h1>
+<div class="row-fluid">
+	<div class='span12 inspirational-quote'>
+            <img alt='{name}' class='profile-picture' src='https://graph.facebook.com/{fbid}/picture?type=large' align="left">
+		<span class='quotation-mark'>&#8220;</span>
+		<span id='userQuote'>{quote}</span>
+		<span class='quotation-mark'>&#8221;</span>
+		{?isUser}
+		<a class='edit' id='editQuote' href='#'>edit</a>
+		{/isUser}
+		<input type='hidden' name='_csrf' id='csrfToken' value='{token}'>
+	</div>
+</div>
+<div class='stats'>
+	<div class='top-charity'>
+		<div class='charity-element'>
+			<div class='left-chunk'>
+				<div class='stat-label'>
+					Top Charity: 
+				</div>
+                {?charityTop}
+				    <div class='stat-label'>{charityCount} donation{@if cond="{charityCount}!==1"}s{/if}</div>
+                {:else}
+                    <div class='stat-label'>0 donations</div>
+                {/charityTop}
+			</div>
+			<div class='charity-block'>
+				<div class='image'>
+				{?charityTop}
+					<img alt='{charityTop.name}' src='/img/charity-logos/{charityTop.imageName}.png'>
+				{:else}
+					<a href = '/'><img alt='Watch a video' src='/img/charity-logos/place_holder.png'></a>
+				{/charityTop}
+				</div>
+				<div class='share'>
+					<div class="fb-like" data-href="http://charityvid.org/charity/{charityTop.nameId}" data-send="true" data-layout="button_count" data-width="200" data-show-faces="false"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{/container}

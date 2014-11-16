@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{+head}
+
+		<title>{+title} CharityVid {/title}</title>
+
+		{+meta}
+		<meta charset="utf-8">
+		<meta name="description" content="Be the difference, support charity just by watching a video.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:url" content="http://charityvid.org">
+        <meta name="twitter:title" content="CharityVid">
+        <meta name="twitter:description" content="CharityVid is dedicated to enabling people to donate to charity, even if all they can afford is their time. By donating just a few minutes day you can make a difference.">
+        <meta name="twitter:image" content="http://charityvid.org/ico/apple-touch-icon-144-precomposed.png">
+        {/meta}
+		{+meta_extra/}
+
+		{+css}
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/css/bootstrap-theme.css" rel="stylesheet">
+		<!--<link href="/css/bootstrap-responsive.css" rel="stylesheet">-->
+		<link href="/css/base.css" rel="stylesheet">
+		{/css}
+		{+css_extra/}
+
+		<!--[if !IE 7]>
+			<style type="text/css">
+				#wrap {display:table;height:100%}
+			</style>
+		<![endif]-->
+
+		{+icons}
+		<link rel="shortcut icon" href="/ico/favicon.ico">
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png">
+		{/icons}
+
+		{/head}
+		{+head_extra/}
+	</head>
+
+	<body>
+		<div id="wrapp">
+			{+facebook}
+			<div id="fb-root"></div>
+			<script>(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId={FACEBOOK_APP_ID}";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));</script>
+			{/facebook}
+			{+body}
+			{+nav}
+			<div class="navbar navbar-static-top">
+				<div class="navbar-inner">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+					<a class="brand" href="/"><img src='/img/logo.png' alt='Charity Vid' id='brand-image'></a>
+					<div class="nav-collapse collapse">
+						<ul class="nav">
+							<li {+home_nav/}>
+								<a href="/">Home</a>
+							</li>
+							<li {+charities_nav/}>
+								<a href="/charities">Charities</a>
+							</li>
+							
+							<li {+about_nav/}>
+								<a href="/about">About</a>
+							</li>
+							<li {+contact_nav/}>
+								<a href="/contact">Contact</a>
+							</li>
+							<li {+advertisers_nav/}>
+								<a href="/advertisers">Advertisers</a>
+							</li>
+						</ul>
+						{?loggedIn}
+						<ul class="nav pull-right">
+							<li {+profile_nav/}>
+								<a href="{profileUrl}"><i class="icon-user"></i> My Profile</a>
+							</li>
+							<li>
+								<a href="/logout"><i class="icon-off"></i> Log Out</a>
+							</li>
+						</ul>
+
+						{:else}
+						<div class="navbar-form pull-right">
+							<div class="login-bar">
+								<div>
+									<a>
+										<img alt="Facebook Login" class="facebook-login" src="/img/facebook_login_small.png">
+									</a>
+								</div>
+							</div>
+						</div>
+						{/loggedIn}
+					</div><!--/.nav-collapse -->
+				</div>
+			</div>
+			{/nav}
+
+			<div class="container" id="main">
+				{+container/}
+			</div>
+		</div>
+		<footer>
+				{+footer}
+				<p>
+					&copy;2013 CharityVid | <a href="/privacy.txt">Privacy Policy</a> | <a href="/terms.txt">Terms of Service</a>
+				</p>
+				{/footer}
+			</footer>
+		{/body}
+        
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+        
+        {+base_js}
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="/libs/bootstrap.min.js" async></script>
+        <script src="/js/base.js"></script>
+		{/base_js}
+		{+js/}
+        
+        {+tracking}
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-34947464-1']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+		{/tracking}
+	</body>
+</html>

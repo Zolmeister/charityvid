@@ -1,0 +1,33 @@
+{>"base.dust"/}
+{<meta_extra}
+{?charityLike}
+<meta property="og:title" content="{charityLike.name}"/>
+<meta property="og:image" content="http://{domain}/img/charity-logos/{charityLike.imageName}.png"/>
+{:else}
+<meta property="og:title" content="CharityVid"/>
+<meta property="og:image" content="http://{domain}/ico/apple-touch-icon-144-precomposed.png"/>
+{/charityLike}
+<meta property="og:site_name" content="CharityVid"/>
+{/meta_extra}
+{<css_extra}<link href="/css/charities.css" rel="stylesheet">{/css_extra}
+{<title}Charities{/title}
+{<charities_nav}class="active"{/charities_nav}
+{<container}	
+	<h1>We support the following charities</h1>
+	<div class='charity-pick-main'>
+	{#charities}
+		<div class='charity-element'>
+			<div class='image'>
+				<img alt='{.name}' src='/img/charity-logos/{.imageName}.png'>
+			</div>
+			<div class='info'>
+				<div class='title'>About:</div>
+				<div class='info-text'>
+					{.aboutText}
+				</div>
+				<a href='{.website}'>{.websiteName}</a>
+			</div>
+		</div>
+	{/charities}
+	</div>
+{/container}

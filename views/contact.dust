@@ -1,0 +1,93 @@
+{>"base.dust"/}
+{<title}Contact Us{/title}
+{<contact_nav}class="active"{/contact_nav}
+{<container}
+<h1>Contact</h1>
+{?sent}
+<h3>Thank you, your message has been sent.</h3>
+{:else}
+<form class="form-horizontal" id="contact-form" method="POST">
+<div class="control-group">
+    <label class="control-label" for="name">Name *</label>
+    <div class="controls">
+      <input type="text" id="name" name="name" placeholder="Name">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="email">Email *</label>
+    <div class="controls">
+      <input type="email" id="email" name="email" placeholder="Email">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="message">Message *</label>
+    <div class="controls">
+      <textarea rows="8" name="message" id="message" class="span5 required" role="textbox" aria-required="true"></textarea>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <input type="submit" class="btn btn-primary" value="Submit"></input>
+    </div>
+  </div>
+  <input type='hidden' name='_csrf' id='csrfToken' value='{token}'>
+</form>
+{<js}
+<!-- TODO move to separate file-->
+<script>
+$(document).ready(function(){
+ 
+ $('#contact-form').submit(function(e){
+  var rules = {
+    name: {
+      required: true
+    },
+    email: {
+      required: true,
+      email: true
+    },
+    message: {
+      required: true
+    }
+  };
+  var ruleList = Object.keys(rules);
+  var sub = true;
+  for(var i=0;i<ruleList.length;i++){
+    var rule=rules[ruleList[i]];
+    if(!rule.required){
+        continue;
+    }
+    else{
+      var input=$("#"+ruleList[i]);
+      input.closest('.control-group').removeClass("error");
+
+      if(input.val()===""){
+        input.closest('.control-group').addClass("error");
+        sub=false
+      }
+      else{
+        if(rule.email){
+          var pattern=new RegExp("^.+@.+\..+$");
+          if(!pattern.test(input.val())){
+            input.closest('.control-group').addClass("error");
+            sub=false
+          }
+          else{
+            continue
+          }
+        }
+        else{
+          continue
+        }
+      }
+    }
+    
+  }
+  return sub;
+ });
+
+}); // end document.ready
+</script>
+{/js}
+{/sent}
+{/container}

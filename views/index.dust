@@ -1,0 +1,115 @@
+{>"base.dust"/}
+{<css_extra}<link href="/css/index.css" rel="stylesheet">{/css_extra}
+{<meta_extra}
+<meta property="og:title" content="CharityVid"/>
+<meta property="og:image" content="http://{domain}/ico/apple-touch-icon-144-precomposed.png"/>
+<meta property="og:site_name" content="CharityVid"/>
+{/meta_extra}
+{<home_nav}class="active"{/home_nav}
+{<container}
+{?loggedIn}
+	{@if cond="{donationsLeft}===0"}
+	<h1>Thank you for donating!</h1>
+	<h3 class="donations-left">You have {donationsLeft} donation{@if cond="{donationsLeft}!==1"}s{/if} left today</h3>
+	<div class="charity-element big-share">
+		<h3>Come back tomorrow to donate again.</h3>
+		<h4>Share CharityVid with your friends</h4>
+		<div class="share-bar">
+			<!-- facebook -->
+			<div class="fb-share fb-like" data-href="http://charityvid.org" data-send="true" data-layout="button_count" data-width="250" data-show-faces="false"></div>
+			
+			<!-- Google+ -->
+			<div class="g-plus" data-action="share" data-annotation="bubble" data-href="http://charityvid.org"></div>
+			<script type="text/javascript">
+			  (function() {
+			    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			    po.src = 'https://apis.google.com/js/plusone.js';
+			    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			  })();
+			</script>
+
+			<!-- twitter -->
+			<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://charityvid.org" data-hashtags="charity">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+			<!-- email -->
+			<a href="mailto:?subject=Check out CharityVid!&amp;body=Check out http://charityvid.org" title="Share by Email"><button class="email-share">Email</button></a>
+		</div>
+</div>
+	{:else}
+	<h1>Click on a charity below to donate</h1>
+	<h3 class="donations-left">You have {donationsLeft} donation{@if cond="{donationsLeft}!==1"}s{/if} left today</h3>
+	<div class='charity-pick-main'>
+	{#charities}
+		<div class='charity-element'>
+            <div class='image-holder'>
+                <div class='image'>
+                    <a href='/donate/{.nameId}'>
+                        <img alt='{.name}' src='/img/charity-logos/{.imageName}.png'>
+                    </a>
+                </div>
+            </div>
+			<div class='donate-box'>
+				<a href='/donate/{.nameId}'><button class='btn btn-primary btn-large donate'>Donate!</button></a>
+				<div class='share'>
+					<div class="fb-like" data-href="http://charityvid.org/charity/{.nameId}" data-send="true" data-layout="button_count" data-width="200" data-show-faces="false"></div>
+				</div>
+			</div>
+			
+			<div class='info'>
+				<div class='title'>About:</div>
+				<div class='info-text'>
+					{.aboutText}
+				</div>
+				<a href='{.website}'>{.websiteName}</a>
+			</div>
+		</div>
+	{/charities}
+	</div>
+	{/if}
+{:else}
+
+<div class="hero-unit">
+    <div class="hero-img"></div>
+    <!--<div class="hero-block">
+        <h1>Support a charity every day!</h1>
+        <p class="hero-text">
+        Watch a single video every day to make a difference.<br>
+        Sign in to get started. 
+    </div>-->
+</div>
+
+
+<div class="row-fluid sub-info">
+    <div class="span4">
+		<h2>Getting started</h2>
+		<p>
+			Sign in with Facebook, and you will be guided through our easy process of selecting a charity you want to donate to, and donating real money at no charge.	
+		</p>
+		<p>
+			<a href="/auth/facebook"><img alt="Facebook Login" class="facebook-login" src="/img/facebook_login_large.png"></a>
+		</p>
+	</div>
+    <div class="span4">
+		<h2>Share</h2>
+		<p>
+			Individually we are strong, but together we can change the world. Spread the word, get others involved.
+		</p>
+		<p>
+			<div class="fb-like" data-href="http://charityvid.org" data-send="true" data-layout="button_count" data-width="250" data-show-faces="false"></div>
+		</p>
+	</div>
+	<div class="span4">
+		<h2>About</h2>
+		<p>
+			CharityVid is a nonprofit dedicated to enabling people to donate to charity, even if all they can afford is their time. 
+            By donating just a few minutes a day you can make a difference. 100% of all donations go to charity.
+		</p>
+		<p>
+			<a class="btn" href="/about">More details &raquo;</a>
+		</p>
+	</div>
+</div>
+
+{/loggedIn}
+{/container}

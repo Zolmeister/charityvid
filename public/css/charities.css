@@ -1,0 +1,65 @@
+.container {
+    min-width: 960px;
+    max-width: 960px;
+}
+
+.charity-pick-main {
+    margin: 0px auto;
+}
+
+.charity-element {
+    width: 28%;
+    margin: 1%;
+    float: left;
+    min-height: 305px;
+}
+
+.charity-element .image {
+    width: 90%;
+    float: none;
+    margin: 0px auto;
+}
+
+.charity-element .info {
+    float: none;
+    margin-top: 20px;
+    width: auto;
+}
+
+.charity-element .info .info-text {
+    font-size: 13px;
+    line-height: 15px;
+}
+
+.charity-element .info .title {
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+@media (max-width: 979px) {
+    h1 {
+        text-align: center;
+    }
+    .container {
+        min-width: 0px;
+        width: auto;
+    }
+    .charity-element {
+        min-width: 160px;
+        min-height: 315px;
+    }
+}
+
+@media (max-width: 777px) {
+    .charity-element {
+        width: 44%;
+    }
+}
+
+@media (max-width: 550px) {
+    .charity-element {
+        width: 80%;
+        margin-left: 7%;
+        min-height: auto;
+    }
+}

@@ -1,0 +1,161 @@
+html, body {
+    height: 100%;
+    background-image: url(/img/background.png);
+}
+#main {
+    padding-bottom: 40px;
+}
+
+footer p{
+    margin-top: -30px;
+    text-align:center;
+    position: relative;
+    height: 20px;
+    width: 100%;
+    clear: both;
+    font-size: 14px;
+} 
+#wrapp {
+    min-height: 100%;
+}
+.container{
+	max-width: 800px;
+}
+
+.navbar-inner {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.navbar .container {
+    width: 800px;
+}
+.navbar .brand{
+	padding: 1px 10px;
+}
+
+.nav {
+    font-weight: bold;
+}
+
+#brand-image{
+	width: 240px;
+    height: 46px;
+}
+.navbar .pull-right{
+    float: right;
+}
+
+@media (max-width: 979px) {
+    .navbar .pull-right {
+        float: left;
+    }
+    .navbar-inner {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+.alternate-login{
+	padding-left:6px;
+}
+.login-bar{
+	display: table;
+	height:45px;
+}
+.login-bar > div{
+	display: table-cell;
+	vertical-align:middle;
+}
+#login{
+	text-decoration: underline;
+	font-weight: bold;
+	cursor: pointer;
+}
+#sign-up{
+	text-decoration: underline;
+	font-weight: bold;
+	cursor: pointer;
+}
+#RES_ID_fb_login_image {
+    display: none;
+}
+.facebook-login {
+	cursor: pointer;
+}
+a{
+	color: #216993;
+}
+.donate{
+	-webkit-box-shadow: 0 7px 6px -6px #666;
+	   -moz-box-shadow: 0 7px 6px -6px #666;
+	        box-shadow: 0 7px 6px -6px #666;
+}
+.image{
+	-moz-box-shadow: 1px 1px 3px 0px #AAA;
+	-webkit-box-shadow: 1px 1px 3px 0px #AAA;
+	box-shadow: 1px 1px 3px 0px #AAA;
+}
+
+.charity-element {
+    border-radius: 5px;
+    background-image: url(/img/B8D9EC.png);
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    -moz-box-shadow: 2px 2px 8px #ACACAC;
+    -webkit-box-shadow: 2px 2px 8px #ACACAC;
+    box-shadow: 2px 2px 8px #ACACAC;
+    text-align: left;
+}
+
+.charity-element .image {
+    float: left;
+    background-color: white;
+    border-radius: 10px;
+    padding: 14px;
+    overflow: hidden;
+}
+
+.charity-element .image img{
+    display: block;
+    margin: 0px auto;
+}
+
+.charity-element .donate {
+    display: block;
+    width: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.charity-element .donate-box {
+    float: left;
+    width: 162px;
+    height: 100%;
+    margin: 0px 10px;
+}
+
+.charity-element .share {
+    width: 135px;
+    height: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.charity-element .info {
+    color: black;
+}
+
+.charity-element .info .info-text {
+    font-size: 15px;
+    line-height: 17px;
+}
+
+.charity-element .info .title {
+    font-size: 20px;
+    padding-bottom: 4px;
+    margin-top: 2px;
+}
