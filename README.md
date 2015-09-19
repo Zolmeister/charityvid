@@ -1,6 +1,5 @@
 Charityvid
 ==========
-http://charityvid.org/
 
 ![](screenshot.png)
 
